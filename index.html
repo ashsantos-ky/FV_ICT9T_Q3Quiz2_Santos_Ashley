@@ -79,38 +79,5 @@
 </details>
 <br>
 	<button class="btn" onclick="bookTicket()">Ticket Price</button>
-
-<script>
-
-        let basePrice = 100;
-        let currentPrice = basePrice;
-        let selectedTickets = 0;
-
-        function applyDiscount(discountRate) {
-            currentPrice = basePrice - (basePrice * discountRate);
-            document.getElementById("ticketPrice").innerText = `$${currentPrice.toFixed(2)}`;
-            updateTotal();
-        }
-
-        function bookTicket() {
-            selectedTickets++;
-            updateTotal();
-            alert("Amazing you have a ticket now!!");
-        }
-
-        function resetTickets() {
-            selectedTickets = 0;
-            updateTotal();
-        }
-
-        function updateTotal() {
-            let total = selectedTickets * currentPrice; // javaS. calculation
-            document.getElementById("ticketCount").innerHTML = ` Tickets Booked: ${selectedTickets}`;
-            document.getElementById("totalPrice").innerHTML = ` Total Price: $${total.toFixed(2)}`; // javaS. outputs
-        }
-    </script>
-
-
-
 </body>
 </html>
